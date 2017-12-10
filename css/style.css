@@ -1,0 +1,139 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  transition: all 0.6s cubic-bezier(.87, -.41, .19, 1.44);
+}
+
+#preloader-image,
+#pixelCanvas {
+  position: fixed;
+  top: -10000px;
+  left: -10000px;
+}
+
+.carousel-container {
+  margin-top: 70px;
+}
+
+.addsContainer {
+  margin-top: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.custom-file-control {
+  padding-right: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dropdown-item {
+  cursor: default;
+}
+
+.dark-file .custom-file-control::before {
+  background-color: #343a40;
+  border-color: #343a40;
+  color: #eee !important;
+}
+
+#average-color-bar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 5px;
+  border-bottom: 1px solid #666;
+  background-color: #000;
+  display: block;
+}
+
+nav.navbar {
+  top: 5px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-item {
+  width: 90% !important;
+  margin: 0 5% !important;
+  height: 90%;
+}
+
+.carousel-item span {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.carousel-item h1 {
+  height: 50%;
+  width: 100%;
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  padding: 1em 0;
+}
+
+.navbar {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+#average-color {
+  position: fixed;
+  background-size: 1px;
+  background-repeat: repeat;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: -9;
+}
+
+.cover-container {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  background-size: 1px;
+  background-repeat: repeat;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.footer-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+.footer-info a {
+  color: #fff;
+  text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-info a:hover,
+.navbar-brand:hover {
+  color: #000;
+  text-decoration: none;
+  text-shadow: rgb(255, 255, 255) 1px 1px 1px;
+}
+
+.footer-info .left {
+  float: left;
+  margin-left: 5px;
+}
+
+.footer-info .right {
+  float: right;
+  margin-right: 5px;
+}

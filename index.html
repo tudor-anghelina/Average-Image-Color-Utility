@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" style="height:100vh">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Average Image Color Overlay</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body style="height:100vh; overflow:hidden">
+  <canvas id="pixelCanvas" width="1" height="1"></canvas>
+  <img id="preloader-image" src="" alt=""></img>
+  <div id="average-color-bar"></div>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light justify-content-between">
+    <div id="nav-bg"></div>
+    <a class="navbar-brand d-none d-md-block" href="http://ta-systems.net/.applets/image_average_color_overlay/">Average Image Color</a>
+    <a class="navbar-brand d-md-none" href="http://ta-systems.net/.applets/image_average_color_overlay/">Avg. Img. Color</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <span class="navbar-text" id="average-color-text">
+        Average image color:
+      </span>
+    </div>
+    <!--   </nav> -->
+  </nav>
+  <div class="container carousel-container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h1>Get the average color of an image</h1>
+          <br/>
+          <span>All images used in this app are provided by <a href="http://pixabay.com" target="_blank">pixabay.com</a></span>
+        </div>
+        <div class="carousel-item">
+          <h1>Upload your own images</h1>
+          <br/>
+          <span>You can also get the average color of images uploaded from your computer.</span>
+        </div>
+        <div class="carousel-item">
+          <h1>Download the source code</h1>
+          <br/>
+          <span>Download the source code from <a href="source.zip">here</a>.</span>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="addsContainer">
+      <!-- Average Color - Slide1 -->
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3428790795861677" data-ad-slot="3137115724" data-ad-format="auto"></ins>
+    </div>
+  </div>
+  <div class="container">
+    <div style="margin-top:10px; padding:10px 15px;" id="toolbar-container">
+      <div id="toolbar">
+        <button onClick="changeImage()" type="button" class="btn btn-dark" id="change-image-btn">Change Image</button>
+        <label class="custom-file dark-file" style="display:none">
+          <input type="file" id="filePicker" class="custom-file-input" accept="image/*">
+          <span class="custom-file-control">Browse...</span>
+        </label>
+        <div class="btn-group float-right">
+          <button type="button" id="image-source-button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Pixabay Images
+        </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item active" id="pb" onclick="fromPixabay()">Pixabay Images</a>
+            <a class="dropdown-item" id="fu" onclick="fromUpload()">Upload Your Own Image</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-info">
+    <div class="left">
+      <a href="" target="_blank">T.A. Systems</a>
+    </div>
+    <div class="right">
+      <a href="" target="_blank">Music</a>
+      <a href="" target="_blank">Tudor Anghelina</a>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Base64/1.0.1/base64.min.js"></script>
+  <script src="js/script.js"></script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</body>
+
+</html>
